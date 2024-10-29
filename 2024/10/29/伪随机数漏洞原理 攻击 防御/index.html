@@ -6,13 +6,30 @@
   
   <title>晚风sec</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="伪随机码漏洞描述伪随机码，是程序语言生成的一定范围的一串数字字符，它的范围是可控的，可以遍历的，很多程序员在开发过程中，如果使用了伪随机数，对提交没做限制，会造成漏洞。 伪随机码 结构可以预先确定，重复产生和复制，具有某种随机序列的随机特性的序列号。 在 WEB 开发中 伪随机码主要用于确定范围 例如 6 位数的范围是 000000-999999 这个范围内 随机生成一个值。在 php 里就有这样">
+<meta property="og:type" content="article">
 <meta property="og:title" content="晚风sec">
-<meta property="og:url" content="https://wanfer0.github.io/index.html">
+<meta property="og:url" content="https://wanfer0.github.io/2024/10/29/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%20%E6%94%BB%E5%87%BB%20%E9%98%B2%E5%BE%A1/index.html">
 <meta property="og:site_name" content="晚风sec">
+<meta property="og:description" content="伪随机码漏洞描述伪随机码，是程序语言生成的一定范围的一串数字字符，它的范围是可控的，可以遍历的，很多程序员在开发过程中，如果使用了伪随机数，对提交没做限制，会造成漏洞。 伪随机码 结构可以预先确定，重复产生和复制，具有某种随机序列的随机特性的序列号。 在 WEB 开发中 伪随机码主要用于确定范围 例如 6 位数的范围是 000000-999999 这个范围内 随机生成一个值。在 php 里就有这样">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://tcs.teambition.net/storage/3138d542352fbafd979149bdcd862ab0a83c?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzhkNTQyMzUyZmJhZmQ5NzkxNDliZGNkODYyYWIwYTgzYyJ9.K7itVepjYmSKXAzWDTbZwQJs27CREVsdTUkttr_RAjE&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/31386a4f9bd1e157bbb7faeecf7009b844e2?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzg2YTRmOWJkMWUxNTdiYmI3ZmFlZWNmNzAwOWI4NDRlMiJ9.-wxdpySNKNf1hRcOsgKgq9B0MsNN5EsX3iZJhQAVs6w&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/3138528a923f2dd80ee9719748cfff51d594?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzg1MjhhOTIzZjJkZDgwZWU5NzE5NzQ4Y2ZmZjUxZDU5NCJ9.zehU3NYYAtSjAqfgXXldAr5eqfmu4K_U6OdNs3a2qvs&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/31380fdde8a143ca858ae15bfdb6f5d992c6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzgwZmRkZThhMTQzY2E4NThhZTE1YmZkYjZmNWQ5OTJjNiJ9.tV5hiSYZeDaaWjiCuiQj-yna1-mX7WZRsEWMNPmfiaA&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/313823dabe51cf84d35d8a2d8d46078c5342?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzgyM2RhYmU1MWNmODRkMzVkOGEyZDhkNDYwNzhjNTM0MiJ9.Peojks0CftqkHHwgQuM9BVCFnCJoqESFw_k6molHmE8&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/313863cfa83a98a18ed62e43031b9e03ed0e?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzg2M2NmYTgzYTk4YTE4ZWQ2MmU0MzAzMWI5ZTAzZWQwZSJ9.2MNNSEauueL3R_Gdbo5vusMp6sTt8p0wo3UtR9JydOA&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/3138bab8f3b3b943d76e29e12f9baa0ab531?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzhiYWI4ZjNiM2I5NDNkNzZlMjllMTJmOWJhYTBhYjUzMSJ9.CPDZyJmcxGP5FcLAhnndwHn519Av7DpBcF2x2u6xKKU&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/31388d7adecde5b39f48bcaa25637c05bef0?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzg4ZDdhZGVjZGU1YjM5ZjQ4YmNhYTI1NjM3YzA1YmVmMCJ9.hTWO4OThwJxtMa4SRNK-6TT6Vosxxmty2F-ty4wLTQI&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/313887f3018b0e31e4a3867eb1da19a6f64b?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzg4N2YzMDE4YjBlMzFlNGEzODY3ZWIxZGExOWE2ZjY0YiJ9.xTB_sK9uM8bU0-JSSSWDQ7w7ktBo0cwOFcOZhJ8tKVk&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/31384974e2e2f6d08133979503cf75aaa7aa?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzg0OTc0ZTJlMmY2ZDA4MTMzOTc5NTAzY2Y3NWFhYTdhYSJ9.FN7SxbBj717Vr0dt6NGvzLWGOCJzaWirNRWwtotY1gw&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/3138e41aa4da8b0bac2ba88ea32ba316363c?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzhlNDFhYTRkYThiMGJhYzJiYTg4ZWEzMmJhMzE2MzYzYyJ9.o3hYo3Zi8LarjjtLf6NQks-YaJzFO7QmVgZyXUZ0LZ8&download=image.png">
+<meta property="og:image" content="https://tcs.teambition.net/storage/31389fb1334a20eafa3d26c2eebf5de1c839?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzg5ZmIxMzM0YTIwZWFmYTNkMjZjMmVlYmY1ZGUxYzgzOSJ9.Z32woh-pOHVQzuzfrqppLQEX7L0EQTCzD_feEFV2g9c&download=image.png">
+<meta property="article:published_time" content="2024-10-29T06:04:20.448Z">
+<meta property="article:modified_time" content="2024-10-28T08:28:24.441Z">
 <meta property="article:author" content="wanfer">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tcs.teambition.net/storage/3138d542352fbafd979149bdcd862ab0a83c?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTczMDcwODg4MywiaWF0IjoxNzMwMTA0MDgzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMzhkNTQyMzUyZmJhZmQ5NzkxNDliZGNkODYyYWIwYTgzYyJ9.K7itVepjYmSKXAzWDTbZwQJs27CREVsdTUkttr_RAjE&download=image.png">
   
     <link rel="alternate" href="/atom.xml" title="晚风sec" type="application/atom+xml">
   
@@ -67,9 +84,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-伪随机数漏洞原理 攻击 防御" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-伪随机数漏洞原理 攻击 防御" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/10/29/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%20%E6%94%BB%E5%87%BB%20%E9%98%B2%E5%BE%A1/" class="article-date">
   <time class="dt-published" datetime="2024-10-29T06:04:20.448Z" itemprop="datePublished">2024-10-29</time>
@@ -131,11 +146,9 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
   
+</article>
 
 
 </section>
