@@ -75,6 +75,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-HTTPD换行解析漏洞(cve-2017-15715)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/29/HTTPD%E6%8D%A2%E8%A1%8C%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E(cve-2017-15715)/" class="article-date">
+  <time class="dt-published" datetime="2024-10-29T08:50:16.000Z" itemprop="datePublished">2024-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/29/HTTPD%E6%8D%A2%E8%A1%8C%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E(cve-2017-15715)/">HTTPD换行解析漏洞</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Apache-HTTPD-换行解析漏洞（CVE-2017-15715）"><a href="#Apache-HTTPD-换行解析漏洞（CVE-2017-15715）" class="headerlink" title="Apache HTTPD 换行解析漏洞（CVE-2017-15715）"></a><strong>Apache HTTPD 换行解析漏洞（CVE-2017-15715）</strong></h2><h3 id="1-漏洞描述"><a href="#1-漏洞描述" class="headerlink" title="1.漏洞描述"></a><strong>1.漏洞描述</strong></h3><p>Apache HTTPD是一款HTTP服务器，它可以通过mod_php来运行PHP网页。其2.4.0~2.4.29版本中存在<br>一个解析漏洞，在解析PHP时，1.php\x0a将被按照PHP后缀进行解析，导致绕过一些服务器的安全策<br>略。</p>
+<p>可以看到这里获取文件名是需要单独post一个name的，因为如果通过 $_FILES[‘file’][‘name’] 获<br>取文件名的话，会把\x0a自动去除，所以 $_FILES[‘file’][‘name’] 这种方式获取文件名就不会造成<br>这个漏洞</p>
+        
+          <p class="article-more-link">
+            <a href="/2024/10/29/HTTPD%E6%8D%A2%E8%A1%8C%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E(cve-2017-15715)/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wanfer0.github.io/2024/10/29/HTTPD%E6%8D%A2%E8%A1%8C%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E(cve-2017-15715)/" data-id="cm2u7mjqh0000egj1b8we23ig" data-title="HTTPD换行解析漏洞" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-xxe漏洞原理和有回显-无回显攻击" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/10/29/xxe%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%89%E5%9B%9E%E6%98%BE-%E6%97%A0%E5%9B%9E%E6%98%BE%E6%94%BB%E5%87%BB/" class="article-date">
@@ -110,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wanfer0.github.io/2024/10/29/xxe%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%89%E5%9B%9E%E6%98%BE-%E6%97%A0%E5%9B%9E%E6%98%BE%E6%94%BB%E5%87%BB/" data-id="cm2u6593x00018sj1bg625434" data-title="xxe漏洞原理和有回显 无回显攻击" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://wanfer0.github.io/2024/10/29/xxe%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%89%E5%9B%9E%E6%98%BE-%E6%97%A0%E5%9B%9E%E6%98%BE%E6%94%BB%E5%87%BB/" data-id="cm2u7mjql0001egj11nqzgwjo" data-title="xxe漏洞原理和有回显 无回显攻击" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -159,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wanfer0.github.io/2024/10/29/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86-%E6%94%BB%E5%87%BB-%E9%98%B2%E5%BE%A1/" data-id="cm2u6593p00008sj12zry3jl5" data-title="伪随机数漏洞原理 攻击 防御" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://wanfer0.github.io/2024/10/29/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86-%E6%94%BB%E5%87%BB-%E9%98%B2%E5%BE%A1/" data-id="cm2u7mjqn0002egj15icf20ty" data-title="伪随机数漏洞原理 攻击 防御" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -200,6 +244,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/10/29/HTTPD%E6%8D%A2%E8%A1%8C%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E(cve-2017-15715)/">HTTPD换行解析漏洞</a>
+          </li>
         
           <li>
             <a href="/2024/10/29/xxe%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E5%92%8C%E6%9C%89%E5%9B%9E%E6%98%BE-%E6%97%A0%E5%9B%9E%E6%98%BE%E6%94%BB%E5%87%BB/">xxe漏洞原理和有回显 无回显攻击</a>
