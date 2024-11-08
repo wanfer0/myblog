@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   
   
-  <title>Archiv: 2024/11 | wanfer&#39;s blog</title>
+  <title>wanfer&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="IOTS.VIP is a blog in order to record my learning and growth">
 <meta property="og:type" content="website">
 <meta property="og:title" content="wanfer&#39;s blog">
-<meta property="og:url" content="https://wanfer0.github.io/archives/2024/11/index.html">
+<meta property="og:url" content="https://wanfer0.github.io/page/2/index.html">
 <meta property="og:site_name" content="wanfer&#39;s blog">
 <meta property="og:description" content="IOTS.VIP is a blog in order to record my learning and growth">
 <meta property="og:locale">
@@ -75,133 +75,61 @@
       <div class="outer">
         <section id="main">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/11/08/%E4%BD%BF%E7%94%A8MyEclipse%E6%95%B4%E5%90%88tomcat%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-11-08T06:55:49.000Z" itemprop="datePublished">Nov 8</time>
+    <article id="post-伪随机数漏洞原理-攻击-防御" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/29/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86-%E6%94%BB%E5%87%BB-%E9%98%B2%E5%BE%A1/" class="article-date">
+  <time class="dt-published" datetime="2024-10-29T06:06:23.000Z" itemprop="datePublished">2024-10-29</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/08/%E4%BD%BF%E7%94%A8MyEclipse%E6%95%B4%E5%90%88tomcat%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/">使用MyEclipse整合tomcat进行项目部署</a>
+      <a class="p-name article-title" href="/2024/10/29/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86-%E6%94%BB%E5%87%BB-%E9%98%B2%E5%BE%A1/">伪随机数漏洞原理 攻击 防御</a>
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/11/08/MyEclipse2014%E5%AE%89%E8%A3%85%E5%B9%B6%E5%BB%BA%E7%AB%8Bjava%E9%A1%B9%E7%9B%AE%E5%92%8Cweb%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-11-08T06:55:34.000Z" itemprop="datePublished">Nov 8</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/08/MyEclipse2014%E5%AE%89%E8%A3%85%E5%B9%B6%E5%BB%BA%E7%AB%8Bjava%E9%A1%B9%E7%9B%AE%E5%92%8Cweb%E9%A1%B9%E7%9B%AE/">MyEclipse2014安装并建立java项目和web项目</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/11/07/%E4%BD%BF%E7%94%A8eclipse%E6%96%B0%E5%BB%BAjava%E9%A1%B9%E7%9B%AE%E5%B9%B6%E8%BF%90%E8%A1%8C/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-11-07T08:13:48.000Z" itemprop="datePublished">Nov 7</time>
-</a>
+        <h3 id="伪随机码漏洞描述"><a href="#伪随机码漏洞描述" class="headerlink" title="伪随机码漏洞描述"></a><strong>伪随机码漏洞描述</strong></h3><p>伪随机码，是程序语言生成的一定范围的一串数字字符，它的范围是可控的，可以遍历的，很多程序<br>员在开发过程中，如果使用了伪随机数，对提交没做限制，会造成漏洞。</p>
+<p>伪随机码 结构可以预先确定，重复产生和复制，具有某种随机序列的随机特性的序列号。</p>
+<p>在 WEB 开发中 伪随机码主要用于确定范围 例如 6 位数的范围是 000000-999999 这个范围内</p>
+<p>随机生成一个值。在 php 里就有这样的函数 rand()函数是产生随机数的一个随机函数</p>
+<p>例如生成 000000-999999 可以这样设置 rand(000000,999999)</p>
+<p>在 WEB 安全里 用到这样的伪随机数 一般是 手机获取验证码。</p>
+<p>如果这个验证码使用这种模式，我们就可以枚举所有数值进行对比，即可绕过。</p>
+        
+          <p class="article-more-link">
+            <a href="/2024/10/29/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86-%E6%94%BB%E5%87%BB-%E9%98%B2%E5%BE%A1/#more">Read More</a>
+          </p>
+        
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/07/%E4%BD%BF%E7%94%A8eclipse%E6%96%B0%E5%BB%BAjava%E9%A1%B9%E7%9B%AE%E5%B9%B6%E8%BF%90%E8%A1%8C/">使用eclipse新建java项目并运行</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/11/07/%E4%BD%BF%E7%94%A8eclipse%E6%95%B4%E5%90%88tomcat%E5%B9%B6%E5%88%9B%E5%BB%BAjavaEE%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-11-07T07:24:01.000Z" itemprop="datePublished">Nov 7</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wanfer0.github.io/2024/10/29/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86-%E6%94%BB%E5%87%BB-%E9%98%B2%E5%BE%A1/" data-id="cm38e5xme0004qgj161273tit" data-title="伪随机数漏洞原理 攻击 防御" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/07/%E4%BD%BF%E7%94%A8eclipse%E6%95%B4%E5%90%88tomcat%E5%B9%B6%E5%88%9B%E5%BB%BAjavaEE%E9%A1%B9%E7%9B%AE/">使用eclipse整合tomcat并创建javaEE项目</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-iis">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/11/05/iis%20%E4%BB%BB%E6%84%8F%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%20%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%20%20%E6%96%87%E4%BB%B6%E5%A4%B9%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-11-05T12:23:05.000Z" itemprop="datePublished">Nov 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/05/iis%20%E4%BB%BB%E6%84%8F%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%20%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%20%20%E6%96%87%E4%BB%B6%E5%A4%B9%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/">iis 任意写入漏洞 文件解析漏洞  文件夹解析漏洞</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/11/04/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%BA%8C%E5%85%B3/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-11-04T09:53:13.000Z" itemprop="datePublished">Nov 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/04/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%BA%8C%E5%85%B3/">封神台-第二关</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
+  
 </article>
-  
-  
-    </div></section>
+
+
+
   
 
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 </section>
         
