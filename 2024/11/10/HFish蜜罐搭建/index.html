@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>HFish蜜罐搭建 | wanfer&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="首先来到HFish官网下载蜜罐搭建程序 https:&#x2F;&#x2F;hfish.net&#x2F;#&#x2F; 这里用Windows版本下载程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HFish蜜罐搭建">
+<meta property="og:url" content="https://wanfer0.github.io/2024/11/10/HFish%E8%9C%9C%E7%BD%90%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="wanfer&#39;s blog">
+<meta property="og:description" content="首先来到HFish官网下载蜜罐搭建程序 https:&#x2F;&#x2F;hfish.net&#x2F;#&#x2F; 这里用Windows版本下载程序">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049788.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049985.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049705.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049961.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049627.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049396.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049719.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049401.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049746.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049413.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049359.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102050620.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049152.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049595.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049993.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049117.png">
+<meta property="article:published_time" content="2024-11-10T12:46:38.000Z">
+<meta property="article:modified_time" content="2024-11-10T12:50:31.130Z">
+<meta property="article:author" content="wanfer">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049788.png">
+  
+    <link rel="alternate" href="/atom.xml" title="wanfer's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">wanfer&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">网络安全技术分享</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wanfer0.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-HFish蜜罐搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/10/HFish%E8%9C%9C%E7%BD%90%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time class="dt-published" datetime="2024-11-10T12:46:38.000Z" itemprop="datePublished">2024-11-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      HFish蜜罐搭建
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>首先来到HFish官网下载蜜罐搭建程序</p>
+<p><a target="_blank" rel="noopener" href="https://hfish.net/#/"><strong>https://hfish.net/#/</strong></a></p>
+<p>这里用Windows版本下载程序</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049788.png"></p>
+<span id="more"></span>
+
+<p>这里来到了Windows的部署手册</p>
+<p><a target="_blank" rel="noopener" href="https://hfish.net/#/2-3-windows"><strong>https://hfish.net/#/2-3-windows</strong></a></p>
+<p>这里按照提示下载即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049985.png"></p>
+<p>下载完压缩包后进行解压</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049705.png"></p>
+<p>然后进入文件夹，运行install.bat文件进行一键安装</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049961.png"></p>
+<p>安装完成后，会弹出窗口，给出蜜罐的本地访问地址以及端口号，和登录的账号密码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049627.png"></p>
+<p>这里打开浏览器进入蜜罐地址，直接继续访问即可</p>
+<p><a target="_blank" rel="noopener" href="https://127.0.0.1:4433/web/login"><strong>https://127.0.0.1:4433/web/login</strong></a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049396.png"></p>
+<p>这里进入到蜜罐的登录界面</p>
+<p>这里使用给出的账号密码进行登录，admin&#x2F;HFish2021</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049719.png"></p>
+<p>登录成功</p>
+<p>这里选择sqlite进行内网的简单测试即可，如果要部署到外网可以使用mysql进行设置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049401.png"></p>
+<p>这样一个简单的蜜罐就部署完毕了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049746.png"></p>
+<p>首页可以看到威胁感知</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049413.png"></p>
+<p>大屏实时攻击展示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049359.png"></p>
+<p>查看攻击来源</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102050620.png"></p>
+<p>查看样本检测</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049152.png"></p>
+<p>查看漏洞模拟，这里有很多漏洞利用模拟</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049595.png"></p>
+<p>查看模板管理</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049993.png"></p>
+<p>查看服务管理</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wanfer0/picture//test/202411102049117.png"></p>
+<p><strong>注意事项</strong>：1、当前HFish分为两个进程,”hfish”进程为管理进程，负责监测、拉起和升级蜜罐主程序。”管理端”进程为蜜罐主程序进程，其执行蜜罐软件程序。因此，安装时候，请务必按照要求，执行hfish进程；如果直接执行管理端程序，可能会导致程序不稳定，升级失败等情况。2、HFish的windows版数据库文件当前存储在 C:\Users\Public\hfish 目录，重装HFish后，HFish默认自动读取该目录内的配置和数据”。3、如果无妨访问Web管理页面，检查TCP&#x2F;4433和TCP&#x2F;4434是否可被访问</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wanfer0.github.io/2024/11/10/HFish%E8%9C%9C%E7%BD%90%E6%90%AD%E5%BB%BA/" data-id="cm3blf2dw0001l8j17lwwfwn1" data-title="HFish蜜罐搭建" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/11/10/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%89%E5%85%B3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">封神台-第三关</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/10/HFish%E8%9C%9C%E7%BD%90%E6%90%AD%E5%BB%BA/">HFish蜜罐搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/10/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%89%E5%85%B3/">封神台-第三关</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/08/%E4%BD%BF%E7%94%A8MyEclipse%E6%95%B4%E5%90%88tomcat%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/">使用MyEclipse整合tomcat进行项目部署</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/08/MyEclipse2014%E5%AE%89%E8%A3%85%E5%B9%B6%E5%BB%BA%E7%AB%8Bjava%E9%A1%B9%E7%9B%AE%E5%92%8Cweb%E9%A1%B9%E7%9B%AE/">MyEclipse2014安装并建立java项目和web项目</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/07/%E4%BD%BF%E7%94%A8eclipse%E6%96%B0%E5%BB%BAjava%E9%A1%B9%E7%9B%AE%E5%B9%B6%E8%BF%90%E8%A1%8C/">使用eclipse新建java项目并运行</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 wanfer<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
